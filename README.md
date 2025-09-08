@@ -1,4 +1,4 @@
-# qa_python# Тесты для BooksCollector
+# Тесты для BooksCollector
 
 ## Реализованные тесты
 
@@ -33,4 +33,4 @@
 
 ## Запуск тестов
 ```bash
-pytest tests.py -v
+pytest test.py -v
