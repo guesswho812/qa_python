@@ -34,12 +34,12 @@ class TestBooksCollector:
 
     def test_set_book_genre_invalid_genre(self, collector):
         collector.books_genre = {'Пикник на обочине': ''}
-        collector.set_book_genre('Пикник на обочине', 'Космоопера')
+        collector.set_book_genre('Пикник на обочине', 'Космоопera')
         assert collector.books_genre['Пикник на обочине'] == ''
 
     def test_set_book_genre_for_nonexistent_book(self, collector):
         collector.set_book_genre('Несуществующая книга', 'Фантастика')
-        assert collector.get_book_genre('Несуществующая книга') is None
+        assert 'Несуществующая книга' not in collector.books_genre
 
     def test_get_books_with_specific_genre(self, collector):
         collector.books_genre = {'Дюна': 'Фантастика', 'Оно': 'Ужасы'}
